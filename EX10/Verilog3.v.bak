@@ -1,0 +1,22 @@
+module jiaoshi(clknormal,clktime,en,clkout,enout,choose);
+input clknormal;input clktime;input en;input choose;
+output clkout; output enout; 
+always@(posedge clknormal)
+begin
+	if(en==0)
+		begin
+			clkout=clknormal;
+			enout=1;
+		end
+end
+
+always@(posedge clktime)
+begin
+	if(en==1)
+		begin
+			clkout=clktime;
+			enout=1;
+		end
+end
+
+endmodule

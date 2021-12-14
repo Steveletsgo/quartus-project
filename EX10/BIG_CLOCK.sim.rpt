@@ -1,0 +1,669 @@
+Simulator report for BIG_CLOCK
+Thu Dec 13 22:20:41 2018
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 284 nodes    ;
+; Simulation Coverage         ;      21.13 % ;
+; Total Number of Transitions ; 6672         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Vector input source                                                                        ; final.vwf  ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      21.13 % ;
+; Total nodes checked                                 ; 284          ;
+; Total output ports checked                          ; 284          ;
+; Total output ports with complete 1/0-value coverage ; 60           ;
+; Total output ports with no 1/0-value coverage       ; 224          ;
+; Total output ports with no 1-value coverage         ; 224          ;
+; Total output ports with no 0-value coverage         ; 224          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                          ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |Block1|hourshigh[1]            ; |Block1|hourshigh[1]            ; pin_out          ;
+; |Block1|hourshigh[0]            ; |Block1|hourshigh[0]            ; pin_out          ;
+; |Block1|clknormal               ; |Block1|clknormal               ; out              ;
+; |Block1|clktime                 ; |Block1|clktime                 ; out              ;
+; |Block1|hourslow[3]             ; |Block1|hourslow[3]             ; pin_out          ;
+; |Block1|hourslow[2]             ; |Block1|hourslow[2]             ; pin_out          ;
+; |Block1|hourslow[1]             ; |Block1|hourslow[1]             ; pin_out          ;
+; |Block1|hourslow[0]             ; |Block1|hourslow[0]             ; pin_out          ;
+; |Block1|jiaoshi:inst2|clkout~0  ; |Block1|jiaoshi:inst2|clkout~0  ; out              ;
+; |Block1|jiaoshi:inst4|clkout~0  ; |Block1|jiaoshi:inst4|clkout~0  ; out              ;
+; |Block1|jiaoshi:inst5|clkout    ; |Block1|jiaoshi:inst5|clkout    ; out              ;
+; |Block1|jiaoshi:inst5|clkout~0  ; |Block1|jiaoshi:inst5|clkout~0  ; out              ;
+; |Block1|hours:inst1|a~2         ; |Block1|hours:inst1|a~2         ; out              ;
+; |Block1|hours:inst1|a~3         ; |Block1|hours:inst1|a~3         ; out              ;
+; |Block1|hours:inst1|b~0         ; |Block1|hours:inst1|b~0         ; out              ;
+; |Block1|hours:inst1|b~1         ; |Block1|hours:inst1|b~1         ; out              ;
+; |Block1|hours:inst1|b~2         ; |Block1|hours:inst1|b~2         ; out              ;
+; |Block1|hours:inst1|b~3         ; |Block1|hours:inst1|b~3         ; out              ;
+; |Block1|hours:inst1|b~4         ; |Block1|hours:inst1|b~4         ; out              ;
+; |Block1|hours:inst1|b~5         ; |Block1|hours:inst1|b~5         ; out              ;
+; |Block1|hours:inst1|b~6         ; |Block1|hours:inst1|b~6         ; out              ;
+; |Block1|hours:inst1|b~7         ; |Block1|hours:inst1|b~7         ; out              ;
+; |Block1|hours:inst1|a~6         ; |Block1|hours:inst1|a~6         ; out              ;
+; |Block1|hours:inst1|a~7         ; |Block1|hours:inst1|a~7         ; out              ;
+; |Block1|hours:inst1|b[1]        ; |Block1|hours:inst1|b[1]        ; regout           ;
+; |Block1|hours:inst1|a~10        ; |Block1|hours:inst1|a~10        ; out              ;
+; |Block1|hours:inst1|a~11        ; |Block1|hours:inst1|a~11        ; out              ;
+; |Block1|hours:inst1|b~8         ; |Block1|hours:inst1|b~8         ; out              ;
+; |Block1|hours:inst1|b~9         ; |Block1|hours:inst1|b~9         ; out              ;
+; |Block1|hours:inst1|b~10        ; |Block1|hours:inst1|b~10        ; out              ;
+; |Block1|hours:inst1|b~11        ; |Block1|hours:inst1|b~11        ; out              ;
+; |Block1|hours:inst1|b[0]        ; |Block1|hours:inst1|b[0]        ; regout           ;
+; |Block1|hours:inst1|b[2]        ; |Block1|hours:inst1|b[2]        ; regout           ;
+; |Block1|hours:inst1|b[3]        ; |Block1|hours:inst1|b[3]        ; regout           ;
+; |Block1|hours:inst1|a[0]        ; |Block1|hours:inst1|a[0]        ; regout           ;
+; |Block1|hours:inst1|a[1]        ; |Block1|hours:inst1|a[1]        ; regout           ;
+; |Block1|hours:inst1|LessThan0~0 ; |Block1|hours:inst1|LessThan0~0 ; out0             ;
+; |Block1|hours:inst1|LessThan0~1 ; |Block1|hours:inst1|LessThan0~1 ; out0             ;
+; |Block1|hours:inst1|LessThan0~2 ; |Block1|hours:inst1|LessThan0~2 ; out0             ;
+; |Block1|hours:inst1|LessThan0~3 ; |Block1|hours:inst1|LessThan0~3 ; out0             ;
+; |Block1|hours:inst1|Add0~0      ; |Block1|hours:inst1|Add0~0      ; out0             ;
+; |Block1|hours:inst1|Add0~1      ; |Block1|hours:inst1|Add0~1      ; out0             ;
+; |Block1|hours:inst1|Add0~2      ; |Block1|hours:inst1|Add0~2      ; out0             ;
+; |Block1|hours:inst1|Add0~3      ; |Block1|hours:inst1|Add0~3      ; out0             ;
+; |Block1|hours:inst1|Add0~4      ; |Block1|hours:inst1|Add0~4      ; out0             ;
+; |Block1|hours:inst1|Add1~0      ; |Block1|hours:inst1|Add1~0      ; out0             ;
+; |Block1|hours:inst1|Add2~0      ; |Block1|hours:inst1|Add2~0      ; out0             ;
+; |Block1|hours:inst1|Add2~2      ; |Block1|hours:inst1|Add2~2      ; out0             ;
+; |Block1|hours:inst1|Add3~0      ; |Block1|hours:inst1|Add3~0      ; out0             ;
+; |Block1|hours:inst1|Add3~1      ; |Block1|hours:inst1|Add3~1      ; out0             ;
+; |Block1|hours:inst1|Add3~2      ; |Block1|hours:inst1|Add3~2      ; out0             ;
+; |Block1|hours:inst1|Add3~3      ; |Block1|hours:inst1|Add3~3      ; out0             ;
+; |Block1|hours:inst1|Add3~4      ; |Block1|hours:inst1|Add3~4      ; out0             ;
+; |Block1|hours:inst1|Add3~5      ; |Block1|hours:inst1|Add3~5      ; out0             ;
+; |Block1|hours:inst1|Add3~7      ; |Block1|hours:inst1|Add3~7      ; out0             ;
+; |Block1|hours:inst1|Add3~8      ; |Block1|hours:inst1|Add3~8      ; out0             ;
+; |Block1|hours:inst1|Add3~10     ; |Block1|hours:inst1|Add3~10     ; out0             ;
+; |Block1|hours:inst1|Add3~11     ; |Block1|hours:inst1|Add3~11     ; out0             ;
+; |Block1|hours:inst1|Add3~12     ; |Block1|hours:inst1|Add3~12     ; out0             ;
+; |Block1|hours:inst1|Equal0~0    ; |Block1|hours:inst1|Equal0~0    ; out0             ;
++---------------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                     ;
++-------------------------------------+-------------------------------------+------------------+
+; Node Name                           ; Output Port Name                    ; Output Port Type ;
++-------------------------------------+-------------------------------------+------------------+
+; |Block1|hourshigh[3]                ; |Block1|hourshigh[3]                ; pin_out          ;
+; |Block1|hourshigh[2]                ; |Block1|hourshigh[2]                ; pin_out          ;
+; |Block1|ifjishi                     ; |Block1|ifjishi                     ; out              ;
+; |Block1|reset                       ; |Block1|reset                       ; out              ;
+; |Block1|minutes                     ; |Block1|minutes                     ; out              ;
+; |Block1|hours                       ; |Block1|hours                       ; out              ;
+; |Block1|minuteshigh[3]              ; |Block1|minuteshigh[3]              ; pin_out          ;
+; |Block1|minuteshigh[2]              ; |Block1|minuteshigh[2]              ; pin_out          ;
+; |Block1|minuteshigh[1]              ; |Block1|minuteshigh[1]              ; pin_out          ;
+; |Block1|minuteshigh[0]              ; |Block1|minuteshigh[0]              ; pin_out          ;
+; |Block1|minuteslow[3]               ; |Block1|minuteslow[3]               ; pin_out          ;
+; |Block1|minuteslow[2]               ; |Block1|minuteslow[2]               ; pin_out          ;
+; |Block1|minuteslow[1]               ; |Block1|minuteslow[1]               ; pin_out          ;
+; |Block1|minuteslow[0]               ; |Block1|minuteslow[0]               ; pin_out          ;
+; |Block1|secondshigh[3]              ; |Block1|secondshigh[3]              ; pin_out          ;
+; |Block1|secondshigh[2]              ; |Block1|secondshigh[2]              ; pin_out          ;
+; |Block1|secondshigh[1]              ; |Block1|secondshigh[1]              ; pin_out          ;
+; |Block1|secondshigh[0]              ; |Block1|secondshigh[0]              ; pin_out          ;
+; |Block1|secondslow[3]               ; |Block1|secondslow[3]               ; pin_out          ;
+; |Block1|secondslow[2]               ; |Block1|secondslow[2]               ; pin_out          ;
+; |Block1|secondslow[1]               ; |Block1|secondslow[1]               ; pin_out          ;
+; |Block1|secondslow[0]               ; |Block1|secondslow[0]               ; pin_out          ;
+; |Block1|jiaoshi:inst2|clkout        ; |Block1|jiaoshi:inst2|clkout        ; out              ;
+; |Block1|BIG_CLOCK:inst|a~0          ; |Block1|BIG_CLOCK:inst|a~0          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~1          ; |Block1|BIG_CLOCK:inst|a~1          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~2          ; |Block1|BIG_CLOCK:inst|a~2          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~3          ; |Block1|BIG_CLOCK:inst|a~3          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~0          ; |Block1|BIG_CLOCK:inst|b~0          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~1          ; |Block1|BIG_CLOCK:inst|b~1          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~2          ; |Block1|BIG_CLOCK:inst|b~2          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~3          ; |Block1|BIG_CLOCK:inst|b~3          ; out              ;
+; |Block1|BIG_CLOCK:inst|y~0          ; |Block1|BIG_CLOCK:inst|y~0          ; out              ;
+; |Block1|BIG_CLOCK:inst|b[1]         ; |Block1|BIG_CLOCK:inst|b[1]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|b~4          ; |Block1|BIG_CLOCK:inst|b~4          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~5          ; |Block1|BIG_CLOCK:inst|b~5          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~6          ; |Block1|BIG_CLOCK:inst|b~6          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~7          ; |Block1|BIG_CLOCK:inst|b~7          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~4          ; |Block1|BIG_CLOCK:inst|a~4          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~5          ; |Block1|BIG_CLOCK:inst|a~5          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~6          ; |Block1|BIG_CLOCK:inst|a~6          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~7          ; |Block1|BIG_CLOCK:inst|a~7          ; out              ;
+; |Block1|BIG_CLOCK:inst|y~1          ; |Block1|BIG_CLOCK:inst|y~1          ; out              ;
+; |Block1|BIG_CLOCK:inst|b[0]         ; |Block1|BIG_CLOCK:inst|b[0]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|a~8          ; |Block1|BIG_CLOCK:inst|a~8          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~9          ; |Block1|BIG_CLOCK:inst|a~9          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~10         ; |Block1|BIG_CLOCK:inst|a~10         ; out              ;
+; |Block1|BIG_CLOCK:inst|a~11         ; |Block1|BIG_CLOCK:inst|a~11         ; out              ;
+; |Block1|BIG_CLOCK:inst|b~8          ; |Block1|BIG_CLOCK:inst|b~8          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~9          ; |Block1|BIG_CLOCK:inst|b~9          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~10         ; |Block1|BIG_CLOCK:inst|b~10         ; out              ;
+; |Block1|BIG_CLOCK:inst|b~11         ; |Block1|BIG_CLOCK:inst|b~11         ; out              ;
+; |Block1|BIG_CLOCK:inst|y~2          ; |Block1|BIG_CLOCK:inst|y~2          ; out              ;
+; |Block1|BIG_CLOCK:inst|y            ; |Block1|BIG_CLOCK:inst|y            ; regout           ;
+; |Block1|BIG_CLOCK:inst|b[2]         ; |Block1|BIG_CLOCK:inst|b[2]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|b[3]         ; |Block1|BIG_CLOCK:inst|b[3]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|a[0]         ; |Block1|BIG_CLOCK:inst|a[0]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|a[1]         ; |Block1|BIG_CLOCK:inst|a[1]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|a[2]         ; |Block1|BIG_CLOCK:inst|a[2]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|a[3]         ; |Block1|BIG_CLOCK:inst|a[3]         ; regout           ;
+; |Block1|jiaoshi:inst4|clkout        ; |Block1|jiaoshi:inst4|clkout        ; out              ;
+; |Block1|jiaoshi:inst4|always0~0     ; |Block1|jiaoshi:inst4|always0~0     ; out0             ;
+; |Block1|jiaoshi:inst4|clkout~1      ; |Block1|jiaoshi:inst4|clkout~1      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|a~0         ; |Block1|BIG_CLOCK:inst3|a~0         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~1         ; |Block1|BIG_CLOCK:inst3|a~1         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~2         ; |Block1|BIG_CLOCK:inst3|a~2         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~3         ; |Block1|BIG_CLOCK:inst3|a~3         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~0         ; |Block1|BIG_CLOCK:inst3|b~0         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~1         ; |Block1|BIG_CLOCK:inst3|b~1         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~2         ; |Block1|BIG_CLOCK:inst3|b~2         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~3         ; |Block1|BIG_CLOCK:inst3|b~3         ; out              ;
+; |Block1|BIG_CLOCK:inst3|y~0         ; |Block1|BIG_CLOCK:inst3|y~0         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b[1]        ; |Block1|BIG_CLOCK:inst3|b[1]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|b~4         ; |Block1|BIG_CLOCK:inst3|b~4         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~5         ; |Block1|BIG_CLOCK:inst3|b~5         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~6         ; |Block1|BIG_CLOCK:inst3|b~6         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~7         ; |Block1|BIG_CLOCK:inst3|b~7         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~4         ; |Block1|BIG_CLOCK:inst3|a~4         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~5         ; |Block1|BIG_CLOCK:inst3|a~5         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~6         ; |Block1|BIG_CLOCK:inst3|a~6         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~7         ; |Block1|BIG_CLOCK:inst3|a~7         ; out              ;
+; |Block1|BIG_CLOCK:inst3|y~1         ; |Block1|BIG_CLOCK:inst3|y~1         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b[0]        ; |Block1|BIG_CLOCK:inst3|b[0]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|a~8         ; |Block1|BIG_CLOCK:inst3|a~8         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~9         ; |Block1|BIG_CLOCK:inst3|a~9         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~10        ; |Block1|BIG_CLOCK:inst3|a~10        ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~11        ; |Block1|BIG_CLOCK:inst3|a~11        ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~8         ; |Block1|BIG_CLOCK:inst3|b~8         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~9         ; |Block1|BIG_CLOCK:inst3|b~9         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~10        ; |Block1|BIG_CLOCK:inst3|b~10        ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~11        ; |Block1|BIG_CLOCK:inst3|b~11        ; out              ;
+; |Block1|BIG_CLOCK:inst3|y~2         ; |Block1|BIG_CLOCK:inst3|y~2         ; out              ;
+; |Block1|BIG_CLOCK:inst3|y           ; |Block1|BIG_CLOCK:inst3|y           ; regout           ;
+; |Block1|BIG_CLOCK:inst3|b[2]        ; |Block1|BIG_CLOCK:inst3|b[2]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|b[3]        ; |Block1|BIG_CLOCK:inst3|b[3]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|a[0]        ; |Block1|BIG_CLOCK:inst3|a[0]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|a[1]        ; |Block1|BIG_CLOCK:inst3|a[1]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|a[2]        ; |Block1|BIG_CLOCK:inst3|a[2]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|a[3]        ; |Block1|BIG_CLOCK:inst3|a[3]        ; regout           ;
+; |Block1|jiaoshi:inst5|always0~0     ; |Block1|jiaoshi:inst5|always0~0     ; out0             ;
+; |Block1|jiaoshi:inst5|clkout~1      ; |Block1|jiaoshi:inst5|clkout~1      ; out0             ;
+; |Block1|hours:inst1|a~0             ; |Block1|hours:inst1|a~0             ; out              ;
+; |Block1|hours:inst1|a~1             ; |Block1|hours:inst1|a~1             ; out              ;
+; |Block1|hours:inst1|a~4             ; |Block1|hours:inst1|a~4             ; out              ;
+; |Block1|hours:inst1|a~5             ; |Block1|hours:inst1|a~5             ; out              ;
+; |Block1|hours:inst1|a~8             ; |Block1|hours:inst1|a~8             ; out              ;
+; |Block1|hours:inst1|a~9             ; |Block1|hours:inst1|a~9             ; out              ;
+; |Block1|hours:inst1|a[2]            ; |Block1|hours:inst1|a[2]            ; regout           ;
+; |Block1|hours:inst1|a[3]            ; |Block1|hours:inst1|a[3]            ; regout           ;
+; |Block1|BIG_CLOCK:inst|LessThan0~0  ; |Block1|BIG_CLOCK:inst|LessThan0~0  ; out0             ;
+; |Block1|BIG_CLOCK:inst|LessThan0~1  ; |Block1|BIG_CLOCK:inst|LessThan0~1  ; out0             ;
+; |Block1|BIG_CLOCK:inst|LessThan0~2  ; |Block1|BIG_CLOCK:inst|LessThan0~2  ; out0             ;
+; |Block1|BIG_CLOCK:inst|LessThan0~3  ; |Block1|BIG_CLOCK:inst|LessThan0~3  ; out0             ;
+; |Block1|BIG_CLOCK:inst3|LessThan0~0 ; |Block1|BIG_CLOCK:inst3|LessThan0~0 ; out0             ;
+; |Block1|BIG_CLOCK:inst3|LessThan0~1 ; |Block1|BIG_CLOCK:inst3|LessThan0~1 ; out0             ;
+; |Block1|BIG_CLOCK:inst3|LessThan0~2 ; |Block1|BIG_CLOCK:inst3|LessThan0~2 ; out0             ;
+; |Block1|BIG_CLOCK:inst3|LessThan0~3 ; |Block1|BIG_CLOCK:inst3|LessThan0~3 ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add0~0       ; |Block1|BIG_CLOCK:inst|Add0~0       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add0~1       ; |Block1|BIG_CLOCK:inst|Add0~1       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add0~2       ; |Block1|BIG_CLOCK:inst|Add0~2       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add0~3       ; |Block1|BIG_CLOCK:inst|Add0~3       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add0~4       ; |Block1|BIG_CLOCK:inst|Add0~4       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add1~0       ; |Block1|BIG_CLOCK:inst|Add1~0       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add1~1       ; |Block1|BIG_CLOCK:inst|Add1~1       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add1~2       ; |Block1|BIG_CLOCK:inst|Add1~2       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add1~3       ; |Block1|BIG_CLOCK:inst|Add1~3       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add1~4       ; |Block1|BIG_CLOCK:inst|Add1~4       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~0       ; |Block1|BIG_CLOCK:inst|Add2~0       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~1       ; |Block1|BIG_CLOCK:inst|Add2~1       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~2       ; |Block1|BIG_CLOCK:inst|Add2~2       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~3       ; |Block1|BIG_CLOCK:inst|Add2~3       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~4       ; |Block1|BIG_CLOCK:inst|Add2~4       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~5       ; |Block1|BIG_CLOCK:inst|Add2~5       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~6       ; |Block1|BIG_CLOCK:inst|Add2~6       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~7       ; |Block1|BIG_CLOCK:inst|Add2~7       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~8       ; |Block1|BIG_CLOCK:inst|Add2~8       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~9       ; |Block1|BIG_CLOCK:inst|Add2~9       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~10      ; |Block1|BIG_CLOCK:inst|Add2~10      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~0       ; |Block1|BIG_CLOCK:inst|Add3~0       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~1       ; |Block1|BIG_CLOCK:inst|Add3~1       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~2       ; |Block1|BIG_CLOCK:inst|Add3~2       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~3       ; |Block1|BIG_CLOCK:inst|Add3~3       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~4       ; |Block1|BIG_CLOCK:inst|Add3~4       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~5       ; |Block1|BIG_CLOCK:inst|Add3~5       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~6       ; |Block1|BIG_CLOCK:inst|Add3~6       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~7       ; |Block1|BIG_CLOCK:inst|Add3~7       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~8       ; |Block1|BIG_CLOCK:inst|Add3~8       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~9       ; |Block1|BIG_CLOCK:inst|Add3~9       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~10      ; |Block1|BIG_CLOCK:inst|Add3~10      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~11      ; |Block1|BIG_CLOCK:inst|Add3~11      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~12      ; |Block1|BIG_CLOCK:inst|Add3~12      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~13      ; |Block1|BIG_CLOCK:inst|Add3~13      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~14      ; |Block1|BIG_CLOCK:inst|Add3~14      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~15      ; |Block1|BIG_CLOCK:inst|Add3~15      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~16      ; |Block1|BIG_CLOCK:inst|Add3~16      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~17      ; |Block1|BIG_CLOCK:inst|Add3~17      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~18      ; |Block1|BIG_CLOCK:inst|Add3~18      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~19      ; |Block1|BIG_CLOCK:inst|Add3~19      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add0~0      ; |Block1|BIG_CLOCK:inst3|Add0~0      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add0~1      ; |Block1|BIG_CLOCK:inst3|Add0~1      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add0~2      ; |Block1|BIG_CLOCK:inst3|Add0~2      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add0~3      ; |Block1|BIG_CLOCK:inst3|Add0~3      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add0~4      ; |Block1|BIG_CLOCK:inst3|Add0~4      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add1~0      ; |Block1|BIG_CLOCK:inst3|Add1~0      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add1~1      ; |Block1|BIG_CLOCK:inst3|Add1~1      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add1~2      ; |Block1|BIG_CLOCK:inst3|Add1~2      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add1~3      ; |Block1|BIG_CLOCK:inst3|Add1~3      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add1~4      ; |Block1|BIG_CLOCK:inst3|Add1~4      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~0      ; |Block1|BIG_CLOCK:inst3|Add2~0      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~1      ; |Block1|BIG_CLOCK:inst3|Add2~1      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~2      ; |Block1|BIG_CLOCK:inst3|Add2~2      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~3      ; |Block1|BIG_CLOCK:inst3|Add2~3      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~4      ; |Block1|BIG_CLOCK:inst3|Add2~4      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~5      ; |Block1|BIG_CLOCK:inst3|Add2~5      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~6      ; |Block1|BIG_CLOCK:inst3|Add2~6      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~7      ; |Block1|BIG_CLOCK:inst3|Add2~7      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~8      ; |Block1|BIG_CLOCK:inst3|Add2~8      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~9      ; |Block1|BIG_CLOCK:inst3|Add2~9      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~10     ; |Block1|BIG_CLOCK:inst3|Add2~10     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~0      ; |Block1|BIG_CLOCK:inst3|Add3~0      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~1      ; |Block1|BIG_CLOCK:inst3|Add3~1      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~2      ; |Block1|BIG_CLOCK:inst3|Add3~2      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~3      ; |Block1|BIG_CLOCK:inst3|Add3~3      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~4      ; |Block1|BIG_CLOCK:inst3|Add3~4      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~5      ; |Block1|BIG_CLOCK:inst3|Add3~5      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~6      ; |Block1|BIG_CLOCK:inst3|Add3~6      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~7      ; |Block1|BIG_CLOCK:inst3|Add3~7      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~8      ; |Block1|BIG_CLOCK:inst3|Add3~8      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~9      ; |Block1|BIG_CLOCK:inst3|Add3~9      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~10     ; |Block1|BIG_CLOCK:inst3|Add3~10     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~11     ; |Block1|BIG_CLOCK:inst3|Add3~11     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~12     ; |Block1|BIG_CLOCK:inst3|Add3~12     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~13     ; |Block1|BIG_CLOCK:inst3|Add3~13     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~14     ; |Block1|BIG_CLOCK:inst3|Add3~14     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~15     ; |Block1|BIG_CLOCK:inst3|Add3~15     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~16     ; |Block1|BIG_CLOCK:inst3|Add3~16     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~17     ; |Block1|BIG_CLOCK:inst3|Add3~17     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~18     ; |Block1|BIG_CLOCK:inst3|Add3~18     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~19     ; |Block1|BIG_CLOCK:inst3|Add3~19     ; out0             ;
+; |Block1|hours:inst1|Add1~1          ; |Block1|hours:inst1|Add1~1          ; out0             ;
+; |Block1|hours:inst1|Add1~2          ; |Block1|hours:inst1|Add1~2          ; out0             ;
+; |Block1|hours:inst1|Add1~3          ; |Block1|hours:inst1|Add1~3          ; out0             ;
+; |Block1|hours:inst1|Add1~4          ; |Block1|hours:inst1|Add1~4          ; out0             ;
+; |Block1|hours:inst1|Add2~1          ; |Block1|hours:inst1|Add2~1          ; out0             ;
+; |Block1|hours:inst1|Add2~3          ; |Block1|hours:inst1|Add2~3          ; out0             ;
+; |Block1|hours:inst1|Add2~4          ; |Block1|hours:inst1|Add2~4          ; out0             ;
+; |Block1|hours:inst1|Add2~5          ; |Block1|hours:inst1|Add2~5          ; out0             ;
+; |Block1|hours:inst1|Add2~6          ; |Block1|hours:inst1|Add2~6          ; out0             ;
+; |Block1|hours:inst1|Add2~7          ; |Block1|hours:inst1|Add2~7          ; out0             ;
+; |Block1|hours:inst1|Add2~8          ; |Block1|hours:inst1|Add2~8          ; out0             ;
+; |Block1|hours:inst1|Add2~9          ; |Block1|hours:inst1|Add2~9          ; out0             ;
+; |Block1|hours:inst1|Add2~10         ; |Block1|hours:inst1|Add2~10         ; out0             ;
+; |Block1|hours:inst1|Add3~6          ; |Block1|hours:inst1|Add3~6          ; out0             ;
+; |Block1|hours:inst1|Add3~9          ; |Block1|hours:inst1|Add3~9          ; out0             ;
+; |Block1|hours:inst1|Add3~13         ; |Block1|hours:inst1|Add3~13         ; out0             ;
+; |Block1|hours:inst1|Add3~14         ; |Block1|hours:inst1|Add3~14         ; out0             ;
+; |Block1|hours:inst1|Add3~15         ; |Block1|hours:inst1|Add3~15         ; out0             ;
+; |Block1|hours:inst1|Add3~16         ; |Block1|hours:inst1|Add3~16         ; out0             ;
+; |Block1|hours:inst1|Add3~17         ; |Block1|hours:inst1|Add3~17         ; out0             ;
+; |Block1|hours:inst1|Add3~18         ; |Block1|hours:inst1|Add3~18         ; out0             ;
+; |Block1|hours:inst1|Add3~19         ; |Block1|hours:inst1|Add3~19         ; out0             ;
+; |Block1|BIG_CLOCK:inst|Equal0~0     ; |Block1|BIG_CLOCK:inst|Equal0~0     ; out0             ;
+; |Block1|BIG_CLOCK:inst|Equal1~0     ; |Block1|BIG_CLOCK:inst|Equal1~0     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Equal0~0    ; |Block1|BIG_CLOCK:inst3|Equal0~0    ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Equal1~0    ; |Block1|BIG_CLOCK:inst3|Equal1~0    ; out0             ;
++-------------------------------------+-------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                     ;
++-------------------------------------+-------------------------------------+------------------+
+; Node Name                           ; Output Port Name                    ; Output Port Type ;
++-------------------------------------+-------------------------------------+------------------+
+; |Block1|hourshigh[3]                ; |Block1|hourshigh[3]                ; pin_out          ;
+; |Block1|hourshigh[2]                ; |Block1|hourshigh[2]                ; pin_out          ;
+; |Block1|ifjishi                     ; |Block1|ifjishi                     ; out              ;
+; |Block1|reset                       ; |Block1|reset                       ; out              ;
+; |Block1|minutes                     ; |Block1|minutes                     ; out              ;
+; |Block1|hours                       ; |Block1|hours                       ; out              ;
+; |Block1|minuteshigh[3]              ; |Block1|minuteshigh[3]              ; pin_out          ;
+; |Block1|minuteshigh[2]              ; |Block1|minuteshigh[2]              ; pin_out          ;
+; |Block1|minuteshigh[1]              ; |Block1|minuteshigh[1]              ; pin_out          ;
+; |Block1|minuteshigh[0]              ; |Block1|minuteshigh[0]              ; pin_out          ;
+; |Block1|minuteslow[3]               ; |Block1|minuteslow[3]               ; pin_out          ;
+; |Block1|minuteslow[2]               ; |Block1|minuteslow[2]               ; pin_out          ;
+; |Block1|minuteslow[1]               ; |Block1|minuteslow[1]               ; pin_out          ;
+; |Block1|minuteslow[0]               ; |Block1|minuteslow[0]               ; pin_out          ;
+; |Block1|secondshigh[3]              ; |Block1|secondshigh[3]              ; pin_out          ;
+; |Block1|secondshigh[2]              ; |Block1|secondshigh[2]              ; pin_out          ;
+; |Block1|secondshigh[1]              ; |Block1|secondshigh[1]              ; pin_out          ;
+; |Block1|secondshigh[0]              ; |Block1|secondshigh[0]              ; pin_out          ;
+; |Block1|secondslow[3]               ; |Block1|secondslow[3]               ; pin_out          ;
+; |Block1|secondslow[2]               ; |Block1|secondslow[2]               ; pin_out          ;
+; |Block1|secondslow[1]               ; |Block1|secondslow[1]               ; pin_out          ;
+; |Block1|secondslow[0]               ; |Block1|secondslow[0]               ; pin_out          ;
+; |Block1|jiaoshi:inst2|clkout        ; |Block1|jiaoshi:inst2|clkout        ; out              ;
+; |Block1|BIG_CLOCK:inst|a~0          ; |Block1|BIG_CLOCK:inst|a~0          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~1          ; |Block1|BIG_CLOCK:inst|a~1          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~2          ; |Block1|BIG_CLOCK:inst|a~2          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~3          ; |Block1|BIG_CLOCK:inst|a~3          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~0          ; |Block1|BIG_CLOCK:inst|b~0          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~1          ; |Block1|BIG_CLOCK:inst|b~1          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~2          ; |Block1|BIG_CLOCK:inst|b~2          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~3          ; |Block1|BIG_CLOCK:inst|b~3          ; out              ;
+; |Block1|BIG_CLOCK:inst|y~0          ; |Block1|BIG_CLOCK:inst|y~0          ; out              ;
+; |Block1|BIG_CLOCK:inst|b[1]         ; |Block1|BIG_CLOCK:inst|b[1]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|b~4          ; |Block1|BIG_CLOCK:inst|b~4          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~5          ; |Block1|BIG_CLOCK:inst|b~5          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~6          ; |Block1|BIG_CLOCK:inst|b~6          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~7          ; |Block1|BIG_CLOCK:inst|b~7          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~4          ; |Block1|BIG_CLOCK:inst|a~4          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~5          ; |Block1|BIG_CLOCK:inst|a~5          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~6          ; |Block1|BIG_CLOCK:inst|a~6          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~7          ; |Block1|BIG_CLOCK:inst|a~7          ; out              ;
+; |Block1|BIG_CLOCK:inst|y~1          ; |Block1|BIG_CLOCK:inst|y~1          ; out              ;
+; |Block1|BIG_CLOCK:inst|b[0]         ; |Block1|BIG_CLOCK:inst|b[0]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|a~8          ; |Block1|BIG_CLOCK:inst|a~8          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~9          ; |Block1|BIG_CLOCK:inst|a~9          ; out              ;
+; |Block1|BIG_CLOCK:inst|a~10         ; |Block1|BIG_CLOCK:inst|a~10         ; out              ;
+; |Block1|BIG_CLOCK:inst|a~11         ; |Block1|BIG_CLOCK:inst|a~11         ; out              ;
+; |Block1|BIG_CLOCK:inst|b~8          ; |Block1|BIG_CLOCK:inst|b~8          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~9          ; |Block1|BIG_CLOCK:inst|b~9          ; out              ;
+; |Block1|BIG_CLOCK:inst|b~10         ; |Block1|BIG_CLOCK:inst|b~10         ; out              ;
+; |Block1|BIG_CLOCK:inst|b~11         ; |Block1|BIG_CLOCK:inst|b~11         ; out              ;
+; |Block1|BIG_CLOCK:inst|y~2          ; |Block1|BIG_CLOCK:inst|y~2          ; out              ;
+; |Block1|BIG_CLOCK:inst|y            ; |Block1|BIG_CLOCK:inst|y            ; regout           ;
+; |Block1|BIG_CLOCK:inst|b[2]         ; |Block1|BIG_CLOCK:inst|b[2]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|b[3]         ; |Block1|BIG_CLOCK:inst|b[3]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|a[0]         ; |Block1|BIG_CLOCK:inst|a[0]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|a[1]         ; |Block1|BIG_CLOCK:inst|a[1]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|a[2]         ; |Block1|BIG_CLOCK:inst|a[2]         ; regout           ;
+; |Block1|BIG_CLOCK:inst|a[3]         ; |Block1|BIG_CLOCK:inst|a[3]         ; regout           ;
+; |Block1|jiaoshi:inst4|clkout        ; |Block1|jiaoshi:inst4|clkout        ; out              ;
+; |Block1|jiaoshi:inst4|always0~0     ; |Block1|jiaoshi:inst4|always0~0     ; out0             ;
+; |Block1|jiaoshi:inst4|clkout~1      ; |Block1|jiaoshi:inst4|clkout~1      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|a~0         ; |Block1|BIG_CLOCK:inst3|a~0         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~1         ; |Block1|BIG_CLOCK:inst3|a~1         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~2         ; |Block1|BIG_CLOCK:inst3|a~2         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~3         ; |Block1|BIG_CLOCK:inst3|a~3         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~0         ; |Block1|BIG_CLOCK:inst3|b~0         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~1         ; |Block1|BIG_CLOCK:inst3|b~1         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~2         ; |Block1|BIG_CLOCK:inst3|b~2         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~3         ; |Block1|BIG_CLOCK:inst3|b~3         ; out              ;
+; |Block1|BIG_CLOCK:inst3|y~0         ; |Block1|BIG_CLOCK:inst3|y~0         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b[1]        ; |Block1|BIG_CLOCK:inst3|b[1]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|b~4         ; |Block1|BIG_CLOCK:inst3|b~4         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~5         ; |Block1|BIG_CLOCK:inst3|b~5         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~6         ; |Block1|BIG_CLOCK:inst3|b~6         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~7         ; |Block1|BIG_CLOCK:inst3|b~7         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~4         ; |Block1|BIG_CLOCK:inst3|a~4         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~5         ; |Block1|BIG_CLOCK:inst3|a~5         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~6         ; |Block1|BIG_CLOCK:inst3|a~6         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~7         ; |Block1|BIG_CLOCK:inst3|a~7         ; out              ;
+; |Block1|BIG_CLOCK:inst3|y~1         ; |Block1|BIG_CLOCK:inst3|y~1         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b[0]        ; |Block1|BIG_CLOCK:inst3|b[0]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|a~8         ; |Block1|BIG_CLOCK:inst3|a~8         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~9         ; |Block1|BIG_CLOCK:inst3|a~9         ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~10        ; |Block1|BIG_CLOCK:inst3|a~10        ; out              ;
+; |Block1|BIG_CLOCK:inst3|a~11        ; |Block1|BIG_CLOCK:inst3|a~11        ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~8         ; |Block1|BIG_CLOCK:inst3|b~8         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~9         ; |Block1|BIG_CLOCK:inst3|b~9         ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~10        ; |Block1|BIG_CLOCK:inst3|b~10        ; out              ;
+; |Block1|BIG_CLOCK:inst3|b~11        ; |Block1|BIG_CLOCK:inst3|b~11        ; out              ;
+; |Block1|BIG_CLOCK:inst3|y~2         ; |Block1|BIG_CLOCK:inst3|y~2         ; out              ;
+; |Block1|BIG_CLOCK:inst3|y           ; |Block1|BIG_CLOCK:inst3|y           ; regout           ;
+; |Block1|BIG_CLOCK:inst3|b[2]        ; |Block1|BIG_CLOCK:inst3|b[2]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|b[3]        ; |Block1|BIG_CLOCK:inst3|b[3]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|a[0]        ; |Block1|BIG_CLOCK:inst3|a[0]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|a[1]        ; |Block1|BIG_CLOCK:inst3|a[1]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|a[2]        ; |Block1|BIG_CLOCK:inst3|a[2]        ; regout           ;
+; |Block1|BIG_CLOCK:inst3|a[3]        ; |Block1|BIG_CLOCK:inst3|a[3]        ; regout           ;
+; |Block1|jiaoshi:inst5|always0~0     ; |Block1|jiaoshi:inst5|always0~0     ; out0             ;
+; |Block1|jiaoshi:inst5|clkout~1      ; |Block1|jiaoshi:inst5|clkout~1      ; out0             ;
+; |Block1|hours:inst1|a~0             ; |Block1|hours:inst1|a~0             ; out              ;
+; |Block1|hours:inst1|a~1             ; |Block1|hours:inst1|a~1             ; out              ;
+; |Block1|hours:inst1|a~4             ; |Block1|hours:inst1|a~4             ; out              ;
+; |Block1|hours:inst1|a~5             ; |Block1|hours:inst1|a~5             ; out              ;
+; |Block1|hours:inst1|a~8             ; |Block1|hours:inst1|a~8             ; out              ;
+; |Block1|hours:inst1|a~9             ; |Block1|hours:inst1|a~9             ; out              ;
+; |Block1|hours:inst1|a[2]            ; |Block1|hours:inst1|a[2]            ; regout           ;
+; |Block1|hours:inst1|a[3]            ; |Block1|hours:inst1|a[3]            ; regout           ;
+; |Block1|BIG_CLOCK:inst|LessThan0~0  ; |Block1|BIG_CLOCK:inst|LessThan0~0  ; out0             ;
+; |Block1|BIG_CLOCK:inst|LessThan0~1  ; |Block1|BIG_CLOCK:inst|LessThan0~1  ; out0             ;
+; |Block1|BIG_CLOCK:inst|LessThan0~2  ; |Block1|BIG_CLOCK:inst|LessThan0~2  ; out0             ;
+; |Block1|BIG_CLOCK:inst|LessThan0~3  ; |Block1|BIG_CLOCK:inst|LessThan0~3  ; out0             ;
+; |Block1|BIG_CLOCK:inst3|LessThan0~0 ; |Block1|BIG_CLOCK:inst3|LessThan0~0 ; out0             ;
+; |Block1|BIG_CLOCK:inst3|LessThan0~1 ; |Block1|BIG_CLOCK:inst3|LessThan0~1 ; out0             ;
+; |Block1|BIG_CLOCK:inst3|LessThan0~2 ; |Block1|BIG_CLOCK:inst3|LessThan0~2 ; out0             ;
+; |Block1|BIG_CLOCK:inst3|LessThan0~3 ; |Block1|BIG_CLOCK:inst3|LessThan0~3 ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add0~0       ; |Block1|BIG_CLOCK:inst|Add0~0       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add0~1       ; |Block1|BIG_CLOCK:inst|Add0~1       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add0~2       ; |Block1|BIG_CLOCK:inst|Add0~2       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add0~3       ; |Block1|BIG_CLOCK:inst|Add0~3       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add0~4       ; |Block1|BIG_CLOCK:inst|Add0~4       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add1~0       ; |Block1|BIG_CLOCK:inst|Add1~0       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add1~1       ; |Block1|BIG_CLOCK:inst|Add1~1       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add1~2       ; |Block1|BIG_CLOCK:inst|Add1~2       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add1~3       ; |Block1|BIG_CLOCK:inst|Add1~3       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add1~4       ; |Block1|BIG_CLOCK:inst|Add1~4       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~0       ; |Block1|BIG_CLOCK:inst|Add2~0       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~1       ; |Block1|BIG_CLOCK:inst|Add2~1       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~2       ; |Block1|BIG_CLOCK:inst|Add2~2       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~3       ; |Block1|BIG_CLOCK:inst|Add2~3       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~4       ; |Block1|BIG_CLOCK:inst|Add2~4       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~5       ; |Block1|BIG_CLOCK:inst|Add2~5       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~6       ; |Block1|BIG_CLOCK:inst|Add2~6       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~7       ; |Block1|BIG_CLOCK:inst|Add2~7       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~8       ; |Block1|BIG_CLOCK:inst|Add2~8       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~9       ; |Block1|BIG_CLOCK:inst|Add2~9       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add2~10      ; |Block1|BIG_CLOCK:inst|Add2~10      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~0       ; |Block1|BIG_CLOCK:inst|Add3~0       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~1       ; |Block1|BIG_CLOCK:inst|Add3~1       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~2       ; |Block1|BIG_CLOCK:inst|Add3~2       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~3       ; |Block1|BIG_CLOCK:inst|Add3~3       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~4       ; |Block1|BIG_CLOCK:inst|Add3~4       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~5       ; |Block1|BIG_CLOCK:inst|Add3~5       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~6       ; |Block1|BIG_CLOCK:inst|Add3~6       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~7       ; |Block1|BIG_CLOCK:inst|Add3~7       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~8       ; |Block1|BIG_CLOCK:inst|Add3~8       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~9       ; |Block1|BIG_CLOCK:inst|Add3~9       ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~10      ; |Block1|BIG_CLOCK:inst|Add3~10      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~11      ; |Block1|BIG_CLOCK:inst|Add3~11      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~12      ; |Block1|BIG_CLOCK:inst|Add3~12      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~13      ; |Block1|BIG_CLOCK:inst|Add3~13      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~14      ; |Block1|BIG_CLOCK:inst|Add3~14      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~15      ; |Block1|BIG_CLOCK:inst|Add3~15      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~16      ; |Block1|BIG_CLOCK:inst|Add3~16      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~17      ; |Block1|BIG_CLOCK:inst|Add3~17      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~18      ; |Block1|BIG_CLOCK:inst|Add3~18      ; out0             ;
+; |Block1|BIG_CLOCK:inst|Add3~19      ; |Block1|BIG_CLOCK:inst|Add3~19      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add0~0      ; |Block1|BIG_CLOCK:inst3|Add0~0      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add0~1      ; |Block1|BIG_CLOCK:inst3|Add0~1      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add0~2      ; |Block1|BIG_CLOCK:inst3|Add0~2      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add0~3      ; |Block1|BIG_CLOCK:inst3|Add0~3      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add0~4      ; |Block1|BIG_CLOCK:inst3|Add0~4      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add1~0      ; |Block1|BIG_CLOCK:inst3|Add1~0      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add1~1      ; |Block1|BIG_CLOCK:inst3|Add1~1      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add1~2      ; |Block1|BIG_CLOCK:inst3|Add1~2      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add1~3      ; |Block1|BIG_CLOCK:inst3|Add1~3      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add1~4      ; |Block1|BIG_CLOCK:inst3|Add1~4      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~0      ; |Block1|BIG_CLOCK:inst3|Add2~0      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~1      ; |Block1|BIG_CLOCK:inst3|Add2~1      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~2      ; |Block1|BIG_CLOCK:inst3|Add2~2      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~3      ; |Block1|BIG_CLOCK:inst3|Add2~3      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~4      ; |Block1|BIG_CLOCK:inst3|Add2~4      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~5      ; |Block1|BIG_CLOCK:inst3|Add2~5      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~6      ; |Block1|BIG_CLOCK:inst3|Add2~6      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~7      ; |Block1|BIG_CLOCK:inst3|Add2~7      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~8      ; |Block1|BIG_CLOCK:inst3|Add2~8      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~9      ; |Block1|BIG_CLOCK:inst3|Add2~9      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add2~10     ; |Block1|BIG_CLOCK:inst3|Add2~10     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~0      ; |Block1|BIG_CLOCK:inst3|Add3~0      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~1      ; |Block1|BIG_CLOCK:inst3|Add3~1      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~2      ; |Block1|BIG_CLOCK:inst3|Add3~2      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~3      ; |Block1|BIG_CLOCK:inst3|Add3~3      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~4      ; |Block1|BIG_CLOCK:inst3|Add3~4      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~5      ; |Block1|BIG_CLOCK:inst3|Add3~5      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~6      ; |Block1|BIG_CLOCK:inst3|Add3~6      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~7      ; |Block1|BIG_CLOCK:inst3|Add3~7      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~8      ; |Block1|BIG_CLOCK:inst3|Add3~8      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~9      ; |Block1|BIG_CLOCK:inst3|Add3~9      ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~10     ; |Block1|BIG_CLOCK:inst3|Add3~10     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~11     ; |Block1|BIG_CLOCK:inst3|Add3~11     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~12     ; |Block1|BIG_CLOCK:inst3|Add3~12     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~13     ; |Block1|BIG_CLOCK:inst3|Add3~13     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~14     ; |Block1|BIG_CLOCK:inst3|Add3~14     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~15     ; |Block1|BIG_CLOCK:inst3|Add3~15     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~16     ; |Block1|BIG_CLOCK:inst3|Add3~16     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~17     ; |Block1|BIG_CLOCK:inst3|Add3~17     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~18     ; |Block1|BIG_CLOCK:inst3|Add3~18     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Add3~19     ; |Block1|BIG_CLOCK:inst3|Add3~19     ; out0             ;
+; |Block1|hours:inst1|Add1~1          ; |Block1|hours:inst1|Add1~1          ; out0             ;
+; |Block1|hours:inst1|Add1~2          ; |Block1|hours:inst1|Add1~2          ; out0             ;
+; |Block1|hours:inst1|Add1~3          ; |Block1|hours:inst1|Add1~3          ; out0             ;
+; |Block1|hours:inst1|Add1~4          ; |Block1|hours:inst1|Add1~4          ; out0             ;
+; |Block1|hours:inst1|Add2~1          ; |Block1|hours:inst1|Add2~1          ; out0             ;
+; |Block1|hours:inst1|Add2~3          ; |Block1|hours:inst1|Add2~3          ; out0             ;
+; |Block1|hours:inst1|Add2~4          ; |Block1|hours:inst1|Add2~4          ; out0             ;
+; |Block1|hours:inst1|Add2~5          ; |Block1|hours:inst1|Add2~5          ; out0             ;
+; |Block1|hours:inst1|Add2~6          ; |Block1|hours:inst1|Add2~6          ; out0             ;
+; |Block1|hours:inst1|Add2~7          ; |Block1|hours:inst1|Add2~7          ; out0             ;
+; |Block1|hours:inst1|Add2~8          ; |Block1|hours:inst1|Add2~8          ; out0             ;
+; |Block1|hours:inst1|Add2~9          ; |Block1|hours:inst1|Add2~9          ; out0             ;
+; |Block1|hours:inst1|Add2~10         ; |Block1|hours:inst1|Add2~10         ; out0             ;
+; |Block1|hours:inst1|Add3~6          ; |Block1|hours:inst1|Add3~6          ; out0             ;
+; |Block1|hours:inst1|Add3~9          ; |Block1|hours:inst1|Add3~9          ; out0             ;
+; |Block1|hours:inst1|Add3~13         ; |Block1|hours:inst1|Add3~13         ; out0             ;
+; |Block1|hours:inst1|Add3~14         ; |Block1|hours:inst1|Add3~14         ; out0             ;
+; |Block1|hours:inst1|Add3~15         ; |Block1|hours:inst1|Add3~15         ; out0             ;
+; |Block1|hours:inst1|Add3~16         ; |Block1|hours:inst1|Add3~16         ; out0             ;
+; |Block1|hours:inst1|Add3~17         ; |Block1|hours:inst1|Add3~17         ; out0             ;
+; |Block1|hours:inst1|Add3~18         ; |Block1|hours:inst1|Add3~18         ; out0             ;
+; |Block1|hours:inst1|Add3~19         ; |Block1|hours:inst1|Add3~19         ; out0             ;
+; |Block1|BIG_CLOCK:inst|Equal0~0     ; |Block1|BIG_CLOCK:inst|Equal0~0     ; out0             ;
+; |Block1|BIG_CLOCK:inst|Equal1~0     ; |Block1|BIG_CLOCK:inst|Equal1~0     ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Equal0~0    ; |Block1|BIG_CLOCK:inst3|Equal0~0    ; out0             ;
+; |Block1|BIG_CLOCK:inst3|Equal1~0    ; |Block1|BIG_CLOCK:inst3|Equal1~0    ; out0             ;
++-------------------------------------+-------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Thu Dec 13 22:20:40 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off BIG_CLOCK -c BIG_CLOCK
+Info: Using vector source file "C:/Users/anu1/Documents/Êýµç/EX10/final.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      21.13 %
+Info: Number of transitions in simulation is 6672
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 164 megabytes
+    Info: Processing ended: Thu Dec 13 22:20:41 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

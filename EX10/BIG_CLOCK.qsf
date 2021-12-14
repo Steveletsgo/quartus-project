@@ -1,0 +1,94 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 132 02/25/2009 SJ Full Version
+# Date created = 16:51:25  December 13, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		BIG_CLOCK_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C5T144C8
+set_global_assignment -name TOP_LEVEL_ENTITY Block1
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:51:25  DECEMBER 13, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.0
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name VERILOG_FILE jiaoshi.v
+set_global_assignment -name VERILOG_FILE BIG_CLOCK.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE BIG_CLOCK.vwf
+set_global_assignment -name VERILOG_FILE hours.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name BDF_FILE Block1.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE final.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE final.vwf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_90 -to clknormal
+set_location_assignment PIN_45 -to clktime
+set_location_assignment PIN_43 -to hours
+set_location_assignment PIN_119 -to minutes
+set_location_assignment PIN_120 -to ifjishi
+set_location_assignment PIN_25 -to reset
+set_location_assignment PIN_125 -to hourshigh[3]
+set_location_assignment PIN_122 -to hourshigh[2]
+set_location_assignment PIN_121 -to hourshigh[1]
+set_location_assignment PIN_118 -to hourshigh[0]
+set_location_assignment PIN_115 -to hourslow[3]
+set_location_assignment PIN_114 -to hourslow[2]
+set_location_assignment PIN_113 -to hourslow[1]
+set_location_assignment PIN_112 -to hourslow[0]
+set_location_assignment PIN_101 -to minuteshigh[3]
+set_location_assignment PIN_100 -to minuteshigh[2]
+set_location_assignment PIN_97 -to minuteshigh[1]
+set_location_assignment PIN_96 -to minuteshigh[0]
+set_location_assignment PIN_94 -to minuteslow[3]
+set_location_assignment PIN_92 -to minuteslow[2]
+set_location_assignment PIN_86 -to minuteslow[1]
+set_location_assignment PIN_81 -to minuteslow[0]
+set_location_assignment PIN_80 -to secondshigh[3]
+set_location_assignment PIN_74 -to secondshigh[2]
+set_location_assignment PIN_72 -to secondshigh[1]
+set_location_assignment PIN_71 -to secondshigh[0]
+set_location_assignment PIN_70 -to secondslow[3]
+set_location_assignment PIN_69 -to secondslow[2]
+set_location_assignment PIN_67 -to secondslow[1]
+set_location_assignment PIN_65 -to secondslow[0]
+set_global_assignment -name MISC_FILE "C:/Users/anu1/Documents/Êýµç/EX10/BIG_CLOCK.dpf"

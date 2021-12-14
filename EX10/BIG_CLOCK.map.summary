@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Dec 13 22:18:55 2018
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : BIG_CLOCK
+Top-level Entity Name : Block1
+Family : Cyclone II
+Total logic elements : 120
+    Total combinational functions : 120
+    Dedicated logic registers : 26
+Total registers : 26
+Total pins : 30
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

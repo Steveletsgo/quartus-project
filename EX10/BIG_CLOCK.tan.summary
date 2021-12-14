@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.184 ns
+From           : reset
+To             : BIG_CLOCK:inst3|b[3]
+From Clock     : --
+To Clock       : minutes
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.142 ns
+From           : BIG_CLOCK:inst3|a[2]
+To             : minuteshigh[2]
+From Clock     : ifjishi
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.272 ns
+From           : reset
+To             : hours:inst1|b[1]
+From Clock     : --
+To Clock       : ifjishi
+Failed Paths   : 0
+
+Type           : Clock Setup: 'ifjishi'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 73.50 MHz ( period = 13.606 ns )
+From           : BIG_CLOCK:inst|y
+To             : jiaoshi:inst4|clkout
+From Clock     : ifjishi
+To Clock       : ifjishi
+Failed Paths   : 0
+
+Type           : Clock Setup: 'minutes'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 113.80 MHz ( period = 8.787 ns )
+From           : BIG_CLOCK:inst3|b[3]
+To             : BIG_CLOCK:inst3|b[3]
+From Clock     : minutes
+To Clock       : minutes
+Failed Paths   : 0
+
+Type           : Clock Setup: 'hours'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 122.07 MHz ( period = 8.192 ns )
+From           : hours:inst1|b[1]
+To             : hours:inst1|a[0]
+From Clock     : hours
+To Clock       : hours
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
